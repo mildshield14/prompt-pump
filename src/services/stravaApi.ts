@@ -39,19 +39,18 @@ export class StravaApiService {
   async exchangeCodeForToken(code: string): Promise<any> {
     console.log('Exchanging code for token:', code);
 
+    const params = new URLSearchParams({
+      client_id: STRAVA_CONFIG.clientId,
+      client_secret: STRAVA_CONFIG.clientSecret,
+      code,
+      grant_type: 'authorization_code'
+    });
+    
     const response = await fetch('https://www.strava.com/oauth/token', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        client_id: STRAVA_CONFIG.clientId,
-        client_secret: STRAVA_CONFIG.clientSecret,
-        code,
-        grant_type: 'authorization_code'
-      })
+      body: params.toString()
     });
-
+    
     if (!response.ok) {
       const errorData = await response.text();
       console.error('Token exchange failed:', response.status, errorData);
