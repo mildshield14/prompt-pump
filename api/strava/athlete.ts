@@ -3,6 +3,14 @@ import type { VercelRequest, VercelResponse } from '@vercel/node';
 const STRAVA_BASE = 'https://www.strava.com/api/v3';
 
 export default async function handler(req: VercelRequest, res: VercelResponse) {
+    res.setHeader('Access-Control-Allow-Origin', '*');    // same-origin, but harmless
+    res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
+    res.setHeader('Access-Control-Allow-Headers', 'Content-Type,Authorization');
+
+    if (req.method === 'OPTIONS') {
+        return res.status(200).end();                       // <-- early return
+    }
+
     if (req.method !== 'GET') {
         return res.status(405).json({ msg: 'Method Not Allowed' });
     }
