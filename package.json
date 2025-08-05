@@ -9,7 +9,7 @@
     "dev": "concurrently -k -n client,server -c magenta,cyan \"npm:dev:client\" \"npm:dev:server\"",
     "build:client": "vite build",
     "build:server": "tsc -p tsconfig.node.json",
-    "build": "npm run build:client && npm run build:server",
+    "build": "vite build && cp dist/index.html dist/404.html",
     "start": "node dist/server.js",
     "lint": "eslint .",
     "preview": "vite preview"
