@@ -37,3 +37,4 @@ Thumbs.db
 # ───────── Optional: OS temp files ───────
 *.swp
 *.tmp
+.vercel
