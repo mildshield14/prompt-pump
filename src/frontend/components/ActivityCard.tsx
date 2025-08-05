@@ -1,6 +1,6 @@
 import React from 'react';
 import { Calendar, Clock, MapPin, Zap, Heart, Gauge } from 'lucide-react';
-import { StravaActivity } from '../types/strava';
+import { StravaActivity } from '../../types/strava.ts';
 
 interface ActivityCardProps {
   activity: StravaActivity;

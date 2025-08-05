@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { StravaApiService } from '../services/stravaApi';
+import { StravaApiService } from '../services/stravaApi.ts';
 
 interface AuthCallbackProps {
   onAuthComplete: (athlete: any) => void;

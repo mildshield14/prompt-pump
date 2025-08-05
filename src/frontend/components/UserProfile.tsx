@@ -1,6 +1,6 @@
 import React from 'react';
 import { User, MapPin, Calendar, Award, LogOut } from 'lucide-react';
-import { StravaApiService } from '../services/stravaApi';
+import { StravaApiService } from '../services/stravaApi.ts';
 
 interface UserProfileProps {
   athlete: any;

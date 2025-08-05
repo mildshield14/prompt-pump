@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { Routes, Route, Navigate } from 'react-router-dom';
-import { StravaAuth } from './components/StravaAuth';
-import { AuthCallback } from './components/AuthCallback';
-import { UserProfile } from './components/UserProfile';
-import { WorkoutList } from './components/WorkoutList';
-import { ExportModal } from './components/ExportModal';
-import { PromptModal } from './components/PromptModal';
-import { StravaActivity } from './types/strava';
-import { StravaApiService } from './services/stravaApi';
+import { StravaAuth } from './components/StravaAuth.tsx';
+import { AuthCallback } from './components/AuthCallback.tsx';
+import { UserProfile } from './components/UserProfile.tsx';
+import { WorkoutList } from './components/WorkoutList.tsx';
+import { ExportModal } from './components/ExportModal.tsx';
+import { PromptModal } from './components/PromptModal.tsx';
+import { StravaActivity } from '../types/strava.ts';
+import { StravaApiService } from './services/stravaApi.ts';
 
 function App() {
   const [athlete, setAthlete] = useState<any>(null);

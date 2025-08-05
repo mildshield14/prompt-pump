@@ -1,6 +1,6 @@
 import React from 'react';
 import { Activity, Zap } from 'lucide-react';
-import { StravaApiService } from '../services/stravaApi';
+import { StravaApiService } from '../services/stravaApi.ts';
 
 interface StravaAuthProps {
   onAuthSuccess: (athlete: any) => void;

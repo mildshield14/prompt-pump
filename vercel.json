@@ -1,0 +1,10 @@
+{
+  "functions": {
+    "api/**/*.ts": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "redirects": [
+    { "source": "/api/strava", "destination": "/api/strava", "statusCode": 308 }
+  ]
+}

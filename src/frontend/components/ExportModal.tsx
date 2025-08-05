@@ -1,6 +1,6 @@
 import React from 'react';
 import { X, Download, Copy, CheckCircle, Lightbulb } from 'lucide-react';
-import { StravaActivity, WorkoutExportData } from '../types/strava';
+import { StravaActivity, WorkoutExportData } from '../../types/strava.ts';
 
 interface ExportModalProps {
   isOpen: boolean;

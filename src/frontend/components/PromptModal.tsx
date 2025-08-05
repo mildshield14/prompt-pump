@@ -1,6 +1,6 @@
 import React from 'react';
 import { X, Copy, CheckCircle, User, Calendar, Weight, Target, Heart, Trophy, Utensils, Shield, TrendingUp, Zap } from 'lucide-react';
-import { StravaActivity } from '../types/strava';
+import { StravaActivity } from '../../types/strava.ts';
 
 interface PromptModalProps {
   isOpen: boolean;

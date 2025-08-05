@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Filter, CheckSquare, Square, Download, FileText } from 'lucide-react';
-import { StravaActivity } from '../types/strava';
-import { StravaApiService } from '../services/stravaApi';
-import { ActivityCard } from './ActivityCard';
+import { StravaActivity } from '../../types/strava.ts';
+import { StravaApiService } from '../services/stravaApi.ts';
+import { ActivityCard } from './ActivityCard.tsx';
 
 interface WorkoutListProps {
   athlete: any;
